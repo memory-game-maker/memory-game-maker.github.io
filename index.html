@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="memory-game.css" />
+    <script async src="./memory-components/load-template.js"></script>
+    <script async src="./memory-components/load-style.js"></script>
+    <script async src="./memory-components/memory-game-baseclass.js"></script>
+    <script async src="./memory-components/memory-game/element.js"></script>
+    <script async src="./memory-components/memory-game-tile/element.js"></script>
+    <template into="MEMORY-GAME-TILE">
+        <style>
+            * {
+                box-sizing: border-box;
+                background-color: aquamarine;
+            }
+        </style>
+    </template>
+</head>
+
+<body>
+    <load-template into="MEMORY-GAME" src="./memory-components/memory-game/template.html"></load-template>
+    <load-template into="MEMORY-GAME-TILE" src="./memory-components/memory-game-tile/template.html"></load-template>
+    <h1>Memory Game</h1>
+    <memory-game tiles="unicode-animals">
+    </memory-game>
+    <script>
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'PageDown') {
+                console.log(event.key);
+            }
+            if (event.key === 'PageUp') {
+                console.log(event.key);
+            }
+        });
+    </script>
+</body>
+
+</html>

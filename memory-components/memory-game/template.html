@@ -1,0 +1,7 @@
+<template>
+    <style onload="this.getRootNode().host.$$style(this)">
+        @import "./memory-components/memory-game/style.css";
+    </style>
+    <div id="board"><slot></slot></div>
+    <button events="click=closeall">Close all</button>
+</template>

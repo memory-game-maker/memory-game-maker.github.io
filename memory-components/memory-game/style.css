@@ -1,0 +1,10 @@
+div#board {
+  --column-count: var(--memory-game-columncount, 6);
+  --row-count: var(--memory-game-rowcount, 6);
+  display: grid;
+  grid-template-columns: repeat(var(--row-count), 1fr);
+  grid-template-rows: repeat(var(--row-count), 1fr);
+  grid-gap: 5px;
+  width: 100%;
+  height: 100%;
+}

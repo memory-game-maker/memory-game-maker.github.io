@@ -1,0 +1,27 @@
+{
+    "license": "Roads Technology",
+    "allunicodes": "🐱🐶🦊🐰🐭🐹🐺🐻🐼🐨🐯🦁🐴🦄🦓🐮🐷🐗🐽🐑🐏🐐🐪🦒🐘🦏🦛🐁🐀🦔",
+    "unicodes": "🐶🐱🐭🐼🐯🐹🐰🐻🐨🦁🐮🐷🐸🐵🐔🐘🐪🦒",
+    "unicode": {
+        "🐱": {
+            "nl": "kat",
+            "en": "cat",
+            "de": "katze",
+            "fr": "chat",
+            "es": "gato",
+            "it": "gatto",
+            "pl": "kot",
+            "pt": "gato",
+            "da": "kat",
+            "fi": "kissa",
+            "no": "katt",
+            "hu": "macska",
+            "cs": "kočka",
+            "sk": "mačka",
+            "sl": "mačka",
+            "hr": "mačka",
+            "ro": "pisică",
+            "el": "γάτα"
+        }
+    }
+}

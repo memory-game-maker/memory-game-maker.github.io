@@ -1,0 +1,46 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+        function createElement(animal) {
+            let name = `animal-${animal}`;
+            console.log(name);
+            if (!customElements.get(name))
+                customElements.define(name, class extends HTMLElement {
+                    constructor() {
+                        // you CAN use script *before* the super() call! MDN is wrong!
+                        let element = (tag = "button", props = {}) => Object.assign(document.createElement(tag), props);
+                        let CSS = (props) => element("style", { innerText: props });
+                        super() // sets AND returns 'this' scope
+                            .attachShadow({
+                                mode: 'open'
+                            }) // sets AND returns this.shadowRoot
+                            .append(
+                                CSS(`:host{display:inline-block;border:1px solid #ccc;padding:5px;background:cornflowerblue}` +
+                                    `button{border:none;background:none;font-size:100px}`),
+                                element("button", { innerText: animal }),
+                                element("slot")
+                            )
+                    }
+
+                })
+            return `<${name}></${name}>`;
+            return document.createElement(name);
+        }
+
+        function createAnimals(emoji) {
+            let elements = [...emoji].map(em => createElement(em));
+            document.body.innerHTML = elements.join("");
+            //document.body.append(...elements);
+        }
+
+        createAnimals("🐶🐭🐯🐼🐯🐶🐼🐭");
+    </script>
+
+</body>
+
+</html>

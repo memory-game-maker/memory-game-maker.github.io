@@ -1,0 +1,16 @@
+{
+    "license": "Roads Technology",
+    "path": "roadslogos",
+    "files": {
+        "": {
+            "nl": "appel",
+            "en": "apple",
+            "de": "Apfel",
+            "fr": "pomme",
+            "es": "manzana",
+            "it": "mela",
+            "pt": "maçã",
+            "ru": "яблоко"
+        }
+    }
+}

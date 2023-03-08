@@ -1,0 +1,18 @@
+<template>
+    <!-- <style onload="this.getRootNode().host.$$style(this)">
+        @import "./memory-components/memory-game-tile/style.css";
+    </style> -->
+    <load-style src="./memory-components/memory-game-tile/style.css"></load-style>
+    <style id="rotate"> </style>
+    <div part="container">
+        <div part="card">
+            <div part="back">
+                <slot>back</slot>
+            </div>
+            <div part="front">
+                <slot>front</slot>
+            </div>
+        </div>
+    </div>
+
+</template>
