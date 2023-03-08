@@ -37,7 +37,9 @@ customElements.whenDefined("memory-game-tile-html").then(() => {
               );
               this.replaceTiles(tiles);
             };
-          let file = await fetch(`./memory-sets/${name}.json`);
+          let filename = `/memory-sets/${name}.json`;
+          console.log(filename);
+          let file = await fetch(filename);
           if (file.status == 200) {
             let emojis = await file.json();
             setTiles(emojis.allunicodes);
